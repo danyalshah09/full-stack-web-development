@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Custom variables/properties/</title>
+
+    <!-- to make it as global variable -->
+<style>
+    :root{
+      --maxwidth: 323px;
+      --font-color: rgb(19, 105, 0);
+
+    }
+.box{
+    --font-color: rgb(19, 105, 0);
+width: 200px;
+height: 200px;
+background-color:red;
+margin: 2px 9px;
+border: red;
+box-shadow: 12px 14px var(--font-color);
+max-width: var(--maxwidth);
+margin: auto;
+}
+
+.container{
+display: flex;
+--font-color: rgb(19, 105, 0);
+background-color: var(--font-color);
+align-items: center;
+justify-content: center;
+
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>
